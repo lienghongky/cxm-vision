@@ -5,10 +5,10 @@ Welcome to CXM-Vision Challenges, a playful yet insightful mini-project where we
 
 ### 💡 Project Highlights:
     1. Learn to See in the Rain ☔
-        I taught a model to remove rain streaks and raindrops from images — helping AI "wipe" the lens just like a virtual windshield wiper.
+        Train a model to remove rain streaks and raindrops from images — a helping AI "wipe" the lens just like a virtual windshield wiper.
 
     2. Learn to See in the Dark 🌑
-        This part lets AI light up the night! I experimented with low-light enhancement to make dark images look like they were taken during the day.
+        This part lets AI light up the night! Experimented with low-light enhancement to make dark images look like they were taken during the day.
 
 ### 🧪 Why?
     Because rain and night are not excuses for bad AI vision anymore!
@@ -28,6 +28,11 @@ Welcome to CXM-Vision Challenges, a playful yet insightful mini-project where we
 ## Introduction
     This project, **CXM Vision**, focuses on solving challenging computer vision tasks such as raindrop removal and low-light image enhancement. It utilizes the **MambaOut-Unet** model, which is optimized for high performance with a balance between accuracy and computational efficiency. The project leverages datasets like **UAV-Rain1k**, **LOLv1**, **LOLv2**, and **LOLv2_real** to train and evaluate the model.
 
+### Proposed Baseline: Mambaout-Unet
+- **Parameters**: ~14.9 M  
+- **Model Size**: ~57 MB  
+- **FLOPs**: ~40 GFLOPs (for a 256x256 input image)  
+
 ## Dataset Sample
 
 
@@ -39,7 +44,9 @@ Welcome to CXM-Vision Challenges, a playful yet insightful mini-project where we
 | Low-Light Enhancement Real| ![Low-Light Image](datasets/LOLv2_real/input/0.png) | ![Enhanced GT](datasets/LOLv2_real/gt/0.png)   | ![Output Image](results/LOLv2_real/0.png) |
 
 
-## Instruction
+## Instruction 
+
+You can try out the model weights and testing images included in the repository by following those steps:
 1. Clone the repository:
     ```bash
     git clone https://github.com/your-repo/cxm-vision.git
@@ -104,10 +111,7 @@ Welcome to CXM-Vision Challenges, a playful yet insightful mini-project where we
 | RAIN800      | Image De-raining Using a Conditional Generative Adversarial Network        | [Link](https://arxiv.org/pdf/1701.05957)                                                      | [Link](http://yu-li.github.io/paper/li_cvpr16_rain.zip)                                         |
 
 
-## Model Details
-- **Parameters: ~14.9 M
-- **Model Size**: ~57 MB
-- **FLOPs**: ~40 GFLOPs (for a 256x256 input image)
+
 
 ## Acknowledgement
 
