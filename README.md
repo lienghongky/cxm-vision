@@ -4,34 +4,44 @@
 Welcome to CXM-Vision Challenges, a playful yet insightful mini-project where we challenged ourself to make machines see under tough conditions — heavy rain and complete darkness!
 
 ### 💡 Project Highlights:
-    1. Learn to See in the Rain ☔
+
+1. Learn to See in the Rain ☔
         Train a model to remove rain streaks and raindrops from images — a helping AI "wipe" the lens just like a virtual windshield wiper.
 
-    2. Learn to See in the Dark 🌑
+2. Learn to See in the Dark 🌑
         This part lets AI light up the night! Experimented with low-light enhancement to make dark images look like they were taken during the day.
 
 ### 🧪 Why?
-    Because rain and night are not excuses for bad AI vision anymore!
-    This project is like giving your AI a pair of night-vision goggles and an umbrella.
+Because rain and night are not excuses for bad AI vision anymore!
+
+This project is like giving your AI a pair of night-vision goggles and an umbrella.
 
 ### ⚙️ What's inside?
-
-    - ✅ Tiny and lightweight models (perfect for fun or prototyping)
-    - ✅ Synthetic datasets for testing (rainy and dark images)
-    - ✅ Testing pipelines
-    - ☑️ Training pipelines (support [**BasicSR**](https://github.com/XPixelGroup/BasicSR) training framework)
-    - ☑️ Web frontend tools with "before vs after"
+- ✅ Tiny and lightweight models (perfect for fun or prototyping)
+- ✅ Synthetic datasets for testing (rainy and dark images)
+- ✅ Testing pipelines
+- ☑️ Training pipelines (support [**BasicSR**](https://github.com/XPixelGroup/BasicSR) training framework)
+- ☑️ Web frontend tools with "before vs after"
 
 
 
 
 ## Introduction
-    This project, **CXM Vision**, focuses on solving challenging computer vision tasks such as raindrop removal and low-light image enhancement. It utilizes the **MambaOut-Unet** model, which is optimized for high performance with a balance between accuracy and computational efficiency. The project leverages datasets like **UAV-Rain1k**, **LOLv1**, **LOLv2**, and **LOLv2_real** to train and evaluate the model.
+This project, **CXM Vision**, focuses on solving challenging computer vision tasks such as raindrop removal and low-light image enhancement. It utilizes the **MambaOut-Unet** model, which is optimized for high performance with a balance between accuracy and computational efficiency. The project leverages datasets like **UAV-Rain1k**, **LOLv1**, **LOLv2**, and **LOLv2_real** to train and evaluate the model.
 
 ### Proposed Baseline: Mambaout-Unet
 - **Parameters**: ~14.9 M  
 - **Model Size**: ~57 MB  
-- **FLOPs**: ~40 GFLOPs (for a 256x256 input image)  
+- **FLOPs**: ~40 GFLOPs (for a 256x256 input image) 
+
+### 📊 Benchmark Results
+
+| Task                  | Dataset       | PSNR (dB) | SSIM  | Model Size (MB) | Inference Time (ms) |
+|-----------------------|---------------|-----------|-------|------------------|----------------------|
+| Raindrop Removal      | UAV-Rain1k    | 23.27     | 0.874 | 57              | 12.3                |
+| Low-Light Enhancement | LOLv1         | 20.812    | 0.811 | 57              | 13.1                |
+| Low-Light Enhancement | LOLv2         | 23.27     | 0.917 | 57              | 13.4                |
+| Low-Light Enhancement | LOLv2_real    |     -     |   -   | 57              | 13.6                |
 
 ## Dataset Sample
 
