@@ -36,12 +36,12 @@ This project, **CXM Vision**, focuses on solving challenging computer vision tas
 
 ### 📊 Benchmark Results
 
-| Task                  | Dataset       | PSNR (dB) | SSIM  | Model Size (MB) | Inference Time (ms) |
+| Task                  | Dataset       | PSNR (dB) | SSIM  |  #Parameters (M) | Inference Time (ms) |
 |-----------------------|---------------|-----------|-------|------------------|----------------------|
-| Raindrop Removal      | UAV-Rain1k    | 23.27     | 0.874 | 57              | 12.3                |
-| Low-Light Enhancement | LOLv1         | 20.812    | 0.811 | 57              | 13.1                |
-| Low-Light Enhancement | LOLv2         | 23.27     | 0.917 | 57              | 13.4                |
-| Low-Light Enhancement | LOLv2_real    |     -     |   -   | 57              | 13.6                |
+| Raindrop Removal      | UAV-Rain1k    | 23.27     | 0.874 | 14.9 M           | 12.3                |
+| Low-Light Enhancement | LOLv1         | 20.812    | 0.811 | 14.9 M           | 13.1                |
+| Low-Light Enhancement | LOLv2         | 23.27     | 0.917 | 14.9 M           | 13.4                |
+| Low-Light Enhancement | LOLv2_real    |     -     |   -   | 14.9 M           | 13.6                |
 
 ## Dataset Sample
 
