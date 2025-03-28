@@ -3,6 +3,8 @@
     
 Welcome to CXM-Vision Challenges, a playful yet insightful mini-project where we challenged ourself to make machines see under tough conditions — heavy rain and complete darkness!
 
+
+[<a href="https://colab.research.google.com/drive/1m4RIk2t7L889GH6RqNYzxJadxvcozFZR?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" width="130" alt="google colab logo"></a>](https://colab.research.google.com/drive/1m4RIk2t7L889GH6RqNYzxJadxvcozFZR?usp=sharing)
 ### 💡 Project Highlights:
 
 1. Learn to See in the Rain ☔
@@ -18,8 +20,9 @@ This project is like giving your AI a pair of night-vision goggles and an umbrel
 
 ### ⚙️ What's inside?
 - ✅ Tiny and lightweight models (perfect for fun or prototyping)
+- ✅ Minimal test code on [<a href="https://colab.research.google.com/drive/1m4RIk2t7L889GH6RqNYzxJadxvcozFZR?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" width="130" alt="google colab logo"></a>](https://colab.research.google.com/drive/1m4RIk2t7L889GH6RqNYzxJadxvcozFZR?usp=sharing) 
 - ✅ Synthetic datasets for testing (rainy and dark images)
-- ✅ Testing pipelines
+- ✅ Testing pipelines with [UV](https://docs.astral.sh/uv/)
 - ☑️ Training pipelines (support [**BasicSR**](https://github.com/XPixelGroup/BasicSR) training framework)
 - ☑️ Web frontend tools with "before vs after"
 
@@ -59,7 +62,7 @@ This project, **CXM Vision**, focuses on solving challenging computer vision tas
 You can try out the model weights and testing images included in the repository by following those steps:
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-repo/cxm-vision.git
+    git clone https://github.com/lienghongky/cxm-vision
     cd cxm-vision
     ```
 2. Install dependencies:
