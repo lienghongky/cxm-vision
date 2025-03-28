@@ -25,14 +25,14 @@ This project is like giving your AI a pair of night-vision goggles and an umbrel
 
 
 
-
 ## Introduction
-This project, **CXM Vision**, focuses on solving challenging computer vision tasks such as raindrop removal and low-light image enhancement. It utilizes the **MambaOut-Unet** model, which is optimized for high performance with a balance between accuracy and computational efficiency. The project leverages datasets like **UAV-Rain1k**, **LOLv1**, **LOLv2**, and **LOLv2_real** to train and evaluate the model.
+This project, **CXM Vision**, focuses on solving challenging computer vision tasks such as raindrop removal and low-light image enhancement. To build the baseline model, we employed the **Gated-CNN module** introduced by the **MambaOut** Paper, which is optimized for high performance with a balance between accuracy and computational efficiency. We also utilize the U-net architecture to enhance the model's ability to perform image restoration tasks effectively. The project leverages datasets like **UAV-Rain1k**, **LOLv1**, **LOLv2**, and **LOLv2_real** to train and evaluate the model.
 
 ### Proposed Baseline: Mambaout-Unet
 - **Parameters**: ~14.9 M  
 - **Model Size**: ~57 MB  
 - **FLOPs**: ~40 GFLOPs (for a 256x256 input image) 
+
 
 ### 📊 Benchmark Results
 
@@ -106,6 +106,10 @@ You can try out the model weights and testing images included in the repository 
     ```bash
        uv run main.py --weights PATH_TO_WEIGHT_FOR_SPECIFIC_TASK --input_dir PATH_TO_TEST_FILE --save
     ``` 
+    
+### 🔗 Download Pretrained Model Weights
+You can download additional pretrained model weights from the following link:  
+[Google Drive - Model Weights](https://drive.google.com/drive/folders/11zlxsY3kbI8BTZe2Urc4_eto-DqKlYPT?usp=drive_link)
 
 ## Related Datasets and Papers
 
@@ -125,7 +129,7 @@ You can try out the model weights and testing images included in the repository 
 
 ## Acknowledgement
 
-This project adopts the **MambaOut** model from the paper *"Do We Really Need Mamba for Vision?"* (CVPR 2025) using U-net architecture to perform image restoration tasks effectively. 
+This project adopts the **Gated-CNN** from **MambaOut** model from the paper *"Do We Really Need Mamba for Vision?"* (CVPR 2025) using U-net architecture to perform image restoration tasks effectively. 
 For more details on MambaOut, visit the [MambaOut GitHub repository](https://github.com/yuweihao/MambaOut).
 
 For more details, refer to the documentation or contact the project maintainers.
