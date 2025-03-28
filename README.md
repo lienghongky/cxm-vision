@@ -123,7 +123,8 @@ You can download additional pretrained model weights from the following link:
 | DDN-Data(aka: Test-1400,test-Fu,Rain-1400 )     | Removing rain from single images via a deep detail network                 | [Link](https://openaccess.thecvf.com/content_cvpr_2017/papers/Fu_Removing_Rain_From_CVPR_2017_paper.pdf) | [Link](https://xueyangfu.github.io/projects/cvpr2017.html)                                      |
 | Rain Drop    | Dual-Pixel Raindrop Removal                                                | [Link](https://bmvc2022.mpi-inf.mpg.de/0439.pdf)                                              | [Link](https://github.com/Yizhou-Li-CV/DPRRN)                                                   |
 | RAIN800      | Image De-raining Using a Conditional Generative Adversarial Network        | [Link](https://arxiv.org/pdf/1701.05957)                                                      | [Link](http://yu-li.github.io/paper/li_cvpr16_rain.zip)                                         |
-
+| LOLv2         | From Fidelity to Perceptual Quality: A Semi-Supervised Approach for Low-Light Image Enhancement | [Link](https://openaccess.thecvf.com/content_CVPR_2020/papers/Yang_From_Fidelity_to_Perceptual_Quality_A_Semi-Supervised_Approach_for_Low-Light_CVPR_2020_paper.pdf) | [Link](https://github.com/flyywh/CVPR-2020-Semi-Low-Light) |
+| LOLv1         | Deep Retinex Decomposition for Low-Light Enhancement | [Link](https://arxiv.org/pdf/1808.04560v1) | [Link](https://daooshee.github.io/BMVC2018website/) |
 
 
 
