@@ -1,5 +1,13 @@
 # 🌧️🌙 CXM-Vision Challenges
-### 1. Learn to See in the Rain | 2. Learn to See in the Dark
+<p align="center">
+    <img src="figures/icon.png" alt="CXM Vision Logo" width="200">
+</p>
+<p align="center" style="font-size:20px">
+    <strong style="color:lightblue">[1]. Learn to See in the Rain</strong>
+    <strong >|</strong>
+    <strong style="color:lightgreen;">[2]. Learn to See in the Dark</strong>
+</p>
+
     
 Welcome to CXM-Vision Challenges, a playful yet insightful mini-project where we challenged ourself to make machines see under tough conditions — heavy rain and complete darkness!
 
@@ -7,11 +15,13 @@ Welcome to CXM-Vision Challenges, a playful yet insightful mini-project where we
 [<a href="https://colab.research.google.com/drive/1m4RIk2t7L889GH6RqNYzxJadxvcozFZR?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" width="130" alt="google colab logo"></a>](https://colab.research.google.com/drive/1m4RIk2t7L889GH6RqNYzxJadxvcozFZR?usp=sharing)
 ### 💡 Project Highlights:
 
-1. Learn to See in the Rain ☔
-        Train a model to remove rain streaks and raindrops from images — a helping AI "wipe" the lens just like a virtual windshield wiper.
+1. **Learn to See in the Rain ☔**
 
-2. Learn to See in the Dark 🌑
-        This part lets AI light up the night! Experimented with low-light enhancement to make dark images look like they were taken during the day.
+    Train a model to remove rain streaks and raindrops from images — a helping AI "wipe" the lens just like a virtual windshield wiper.
+
+2. **Learn to See in the Dark 🌑**
+
+    This part lets AI light up the night! Experimented with low-light enhancement to make dark images look like they were taken during the day.
 
 ### 🧪 Why?
 Because rain and night are not excuses for bad AI vision anymore!
@@ -23,8 +33,8 @@ This project is like giving your AI a pair of night-vision goggles and an umbrel
 - ✅ Minimal test code on [<a href="https://colab.research.google.com/drive/1m4RIk2t7L889GH6RqNYzxJadxvcozFZR?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" width="130" alt="google colab logo"></a>](https://colab.research.google.com/drive/1m4RIk2t7L889GH6RqNYzxJadxvcozFZR?usp=sharing) 
 - ✅ Synthetic datasets for testing (rainy and dark images)
 - ✅ Testing pipelines with [UV](https://docs.astral.sh/uv/)
-- ☑️ Training pipelines (support [**BasicSR**](https://github.com/XPixelGroup/BasicSR) training framework)
-- ☑️ Web frontend tools with "before vs after"
+- ☑️ Training pipelines (support [**BasicSR**](https://github.com/XPixelGroup/BasicSR) training framework) [*Help wanted !!*]
+- ☑️ Web frontend tools with "before vs after" [*Help wanted !!* [see example](https://compress.coxomo.com/)]
 
 
 
@@ -34,18 +44,28 @@ This project, **CXM Vision**, focuses on solving challenging computer vision tas
 ### Proposed Baseline: Mambaout-Unet
 - **Parameters**: ~14.9 M  
 - **Model Size**: ~57 MB  
-- **FLOPs**: ~40 GFLOPs (for a 256x256 input image) 
+- **FLOPs**: ~47.7 GFLOPs (for a 256x256 input image) 
 
 
 ### 📊 Benchmark Results
 
 | Task                  | Dataset       | PSNR (dB) | SSIM  |  #Parameters (M) | Inference Time (ms) |
 |-----------------------|---------------|-----------|-------|------------------|----------------------|
-| Raindrop Removal      | UAV-Rain1k    | 23.27     | 0.874 | 14.9 M           | 12.3                |
+| Raindrop Removal(SOTA)| UAV-Rain1k    | 25.25     | 0.908 | 14.9 M           | 12.3                |
 | Low-Light Enhancement | LOLv1         | 20.812    | 0.811 | 14.9 M           | 13.1                |
 | Low-Light Enhancement | LOLv2         | 23.27     | 0.917 | 14.9 M           | 13.4                |
 | Low-Light Enhancement | LOLv2_real    |     -     |   -   | 14.9 M           | 13.6                |
 
+### 📊 UAV-Rain1k (Comparison with Other Methods)
+| Method                  | Type          | #Parameters (M) | FLOPs (G) | PSNR (dB) | SSIM   |
+|-------------------------|---------------|-----------------|-----------|-----------|--------|
+| DSC                     | Prior         | -               | -         | 16.68     | 0.7142 |
+| RCDNet                  | CNN           | 3.7             | 21.2      | 22.48     | 0.8753 |
+| SPDNet                  | CNN           | 3.04            | 89.3      | 22.54     | 0.8594 |
+| IDT                     | Transformer   | 16.41           | 61.9      | 22.47     | 0.8957 |
+| Restormer               | Transformer   | 26.12           | 174.7     | 24.78     | 0.9054 |
+| DRSformer               | Transformer   | 33.65           | 242.9     | 24.93     | **0.9155** |
+| **Ours**                | Gated-CNN     | 14.9            | 47.7      | **25.25** | 0.9086 |
 ## Dataset Sample
 
 
@@ -79,6 +99,7 @@ You can try out the model weights and testing images included in the repository 
     uv sync
     ```
 3. Prepare your dataset by organizing it in the `datasets/` directory as shown bellow.
+    For full benchmark againt other method download full evaluation set from officail page.
     
     Below is an example of the dataset structure used in this project:
     ```
@@ -118,7 +139,7 @@ You can download additional pretrained model weights from the following link:
 
 | Dataset      | Paper Title                                                                 | Paper Link                                                                                     | Dataset Link                                                                                     |
 |--------------|-----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
-| UAV-Rain1k   | UAV-Rain1k: A Benchmark for Raindrop Removal from UAV Aerial Imagery       | [Link](https://arxiv.org/pdf/2402.05773)                                                      | [Link](https://drive.google.com/open?id=1e7R76s6vwUJxILOcAsthgDLPSnOrQ49K)                      |
+| UAV-Rain1k   | UAV-Rain1k: A Benchmark for Raindrop Removal from UAV Aerial Imagery       | [Link](https://arxiv.org/pdf/2402.05773)                                                      | [Link](https://drive.google.com/file/d/1uELYr8-EesWXVi-Ty0vd4_7ig7taUDfq/view)                      |
 | RainDrop     | Attentive generative adversarial network for raindrop removal from a single image | [Link](https://arxiv.org/pdf/1711.10098)                                                      | [Link](https://github.com/rui1996/DeRaindrop?tab=readme-ov-file)                                |
 | RainDS       | Removing Raindrops and Rain Streaks in One Go                              | [Link](https://openaccess.thecvf.com/content/CVPR2021/papers/Quan_Removing_Raindrops_and_Rain_Streaks_in_One_Go_CVPR_2021_paper.pdf) | [Link](https://github.com/Songforrr/RainDS_CCN?tab=readme-ov-file)                              |
 | DID-Data     | Density-aware Single Image De-raining using a Multi-stream Dense Network   | [Link](https://openaccess.thecvf.com/content_cvpr_2018/papers/Zhang_Density-Aware_Single_Image_CVPR_2018_paper.pdf) | [Link](https://github.com/hezhangsprinter/DID-MDN)                                              |
