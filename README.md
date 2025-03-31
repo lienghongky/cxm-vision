@@ -41,10 +41,12 @@ This project is like giving your AI a pair of night-vision goggles and an umbrel
 ## Introduction
 This project, **CXM Vision**, focuses on solving challenging computer vision tasks such as raindrop removal and low-light image enhancement. To build the baseline model, we employed the **Gated-CNN module** introduced by the **MambaOut** Paper, which is optimized for high performance with a balance between accuracy and computational efficiency. We also utilize the U-net architecture to enhance the model's ability to perform image restoration tasks effectively. The project leverages datasets like **UAV-Rain1k**, **LOLv1**, **LOLv2**, and **LOLv2_real** to train and evaluate the model.
 
+
+
 ### Proposed Baseline: Mambaout-Unet
 - **Parameters**: ~14.9 M  
 - **Model Size**: ~57 MB  
-- **FLOPs**: ~47.7 GFLOPs (for a 256x256 input image) 
+- **FLOPs**: ~47.7 GFLOPs (for a 256x256 input image)
 
 
 ### 📊 Benchmark Results
@@ -154,7 +156,12 @@ You can download additional pretrained model weights from the following link:
 
 ## Acknowledgement
 
-This project adopts the **Gated-CNN** from **MambaOut** model from the paper *"Do We Really Need Mamba for Vision?"* (CVPR 2025) using U-net architecture to perform image restoration tasks effectively. 
-For more details on MambaOut, visit the [MambaOut GitHub repository](https://github.com/yuweihao/MambaOut).
+1. This project adopts the **Gated-CNN** module from **MambaOut** model from the paper *"Do We Really Need Mamba for Vision?"* (CVPR 2025).For more details on MambaOut, visit the [MambaOut GitHub repository](https://github.com/yuweihao/MambaOut).
+
+
+2. This project also leverages the **BasicSR** framework for training pipelines. BasicSR is a foundational library for image and video restoration tasks, providing efficient tools and utilities for model training and evaluation. For more details, visit the [BasicSR GitHub repository](https://github.com/XPixelGroup/BasicSR).
+
+
+
 
 For more details, refer to the documentation or contact the project maintainers.
