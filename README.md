@@ -43,7 +43,7 @@ This project, **CXM Vision**, focuses on solving challenging computer vision tas
 
 
 
-### Proposed Baseline: Mambaout-Unet
+### Proposed Baseline: cxm-vision-unet v1
 - **Parameters**: ~14.9 M  
 - **Model Size**: ~57 MB  
 - **FLOPs**: ~47.7 GFLOPs (for a 256x256 input image)
