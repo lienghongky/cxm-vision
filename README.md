@@ -10,10 +10,12 @@
 
     
 Welcome to CXM-Vision Challenges, a playful yet insightful mini-project where we challenged ourself to make machines see under tough conditions — heavy rain and complete darkness!
+**🧪 Why?**
+Because rain and night are not excuses for bad AI vision anymore! This project is like giving your AI a pair of night-vision goggles and an umbrella.
 
 
 [<a href="https://colab.research.google.com/drive/1m4RIk2t7L889GH6RqNYzxJadxvcozFZR?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" width="130" alt="google colab logo"></a>](https://colab.research.google.com/drive/1m4RIk2t7L889GH6RqNYzxJadxvcozFZR?usp=sharing)
-### 💡 Project Highlights:
+### 💡 Project Highlights and Challenge Tracks:
 
 1. **Learn to See in the Rain ☔**
 
@@ -23,10 +25,24 @@ Welcome to CXM-Vision Challenges, a playful yet insightful mini-project where we
 
     This part lets AI light up the night! Experimented with low-light enhancement to make dark images look like they were taken during the day.
 
-### 🧪 Why?
-Because rain and night are not excuses for bad AI vision anymore!
+### 🏆 Challenge Rules
 
-This project is like giving your AI a pair of night-vision goggles and an umbrella.
+1. **Fair Play**: All participants must use the original datasets and adhere to the evaluation protocols outlined in original paper.
+2. **Originality**: Submissions must be your own work. Plagiarism or unauthorized use of others' work will result in disqualification.
+3. **Reproducibility**: Ensure that your code and results can be reproduced. We recommend providing a Colab notebook or using the `uv` for seamless reproducibility.
+4. **📝 Submission**: Push your code and method to your own GitHub repository and make a pull request to update the table below with your results:
+###  Leader Board
+| Task Type             | Method Name            | GitHub Repository Link                                      | PSNR (dB) | SSIM   | Inference Time (s) | Description                                                                 |
+|-----------------------|------------------------|------------------------------------------------------------|-----------|--------|---------------------|-----------------------------------------------------------------------------|
+| Task here | Your Method Name Here  | [GitHub Link](https://github.com/lienghongky/cxm-vision)   | XX.XXX    | X.XXXX | X.XX                | Brief description of your method and its unique features.                  |
+
+
+Good luck, and may the best solution win! 🚀
+
+
+## Introduction (Our Baseline)
+This project, **CXM Vision**, focuses on solving challenging computer vision tasks such as raindrop removal and low-light image enhancement. To build the baseline model, we employed the **Gated-CNN module** introduced by the **MambaOut** Paper, which is optimized for high performance with a balance between accuracy and computational efficiency. We also utilize the U-net architecture to enhance the model's ability to perform image restoration tasks effectively. The project leverages datasets like **UAV-Rain1k**, **LOLv1**, **LOLv2**, and **LOLv2_real** to train and evaluate the model.
+
 
 ### ⚙️ What's inside?
 - ✅ Tiny and lightweight models (perfect for fun or prototyping)
@@ -37,28 +53,22 @@ This project is like giving your AI a pair of night-vision goggles and an umbrel
 - ☑️ Web frontend tools with "before vs after" [*Help wanted !!* [see example](https://compress.coxomo.com/)]
 
 
-
-## Introduction
-This project, **CXM Vision**, focuses on solving challenging computer vision tasks such as raindrop removal and low-light image enhancement. To build the baseline model, we employed the **Gated-CNN module** introduced by the **MambaOut** Paper, which is optimized for high performance with a balance between accuracy and computational efficiency. We also utilize the U-net architecture to enhance the model's ability to perform image restoration tasks effectively. The project leverages datasets like **UAV-Rain1k**, **LOLv1**, **LOLv2**, and **LOLv2_real** to train and evaluate the model.
-
-
-
 ### Proposed Baseline: cxm-vision-unet v1
 - **Parameters**: ~14.9 M  
 - **Model Size**: ~57 MB  
 - **FLOPs**: ~47.7 GFLOPs (for a 256x256 input image)
 
 
-### 📊 Benchmark Results
+### 📊 Benchmark Results [Weights](https://drive.google.com/drive/folders/11zlxsY3kbI8BTZe2Urc4_eto-DqKlYPT?usp=drive_link)
 
-| Task                  | Dataset       | PSNR (dB) | SSIM  |  #Parameters (M) | Inference Time (ms) |
+| Task                  | Dataset       | PSNR (dB) | SSIM  |  #Parameters (M) | Inference Time (s)   |
 |-----------------------|---------------|-----------|-------|------------------|----------------------|
-| Raindrop Removal(SOTA)| UAV-Rain1k    | 25.25     | 0.908 | 14.9 M           | 12.3                |
-| Low-Light Enhancement | LOLv1         | 20.812    | 0.811 | 14.9 M           | 13.1                |
-| Low-Light Enhancement | LOLv2         | 23.27     | 0.917 | 14.9 M           | 13.4                |
-| Low-Light Enhancement | LOLv2_real    |     -     |   -   | 14.9 M           | 13.6                |
+| Raindrop Removal(SOTA)| UAV-Rain1k    | 25.258    | 0.9086| 14.9 M           | 0.42   (1500x1000)   |
+| Low-Light Enhancement | LOLv1         | 22.655    | 0.8363| 14.9 M           | 0.08   (600x400)     |
+| Low-Light Enhancement | LOLv2         | 23.580    | 0.9279| 14.9 M           | 0.05   (284x284)     |
+| Low-Light Enhancement | LOLv2_real    |     -     |   -   | 14.9 M           | -      (600x400)     |
 
-### 📊 UAV-Rain1k (Comparison with Other Methods)
+### 📊 UAV-Rain1k: Follow previous works on (YCbCr color space)
 | Method                  | Type          | #Parameters (M) | FLOPs (G) | PSNR (dB) | SSIM   |
 |-------------------------|---------------|-----------------|-----------|-----------|--------|
 | DSC                     | Prior         | -               | -         | 16.68     | 0.7142 |
@@ -137,6 +147,7 @@ You can try out the model weights and testing images included in the repository 
 You can download additional pretrained model weights from the following link:  
 [Google Drive - Model Weights](https://drive.google.com/drive/folders/11zlxsY3kbI8BTZe2Urc4_eto-DqKlYPT?usp=drive_link)
 
+
 ## Related Datasets and Papers
 
 | Dataset      | Paper Title                                                                 | Paper Link                                                                                     | Dataset Link                                                                                     |
@@ -159,7 +170,7 @@ You can download additional pretrained model weights from the following link:
 1. This project adopts the **Gated-CNN** module from **MambaOut** model from the paper *"Do We Really Need Mamba for Vision?"* (CVPR 2025).For more details on MambaOut, visit the [MambaOut GitHub repository](https://github.com/yuweihao/MambaOut).
 
 
-2. This project also leverages the **BasicSR** framework for training pipelines. BasicSR is a foundational library for image and video restoration tasks, providing efficient tools and utilities for model training and evaluation. For more details, visit the [BasicSR GitHub repository](https://github.com/XPixelGroup/BasicSR).
+2. All the models are trained using **BasicSR** pipelines. BasicSR is a foundational library for image and video restoration tasks, providing efficient tools and utilities for model training and evaluation. For more details, visit the [BasicSR GitHub repository](https://github.com/XPixelGroup/BasicSR).
 
 
 
