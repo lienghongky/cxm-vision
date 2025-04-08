@@ -47,12 +47,12 @@ This project, **CXM Vision**, focuses on solving challenging computer vision tas
 ### ⚙️ What's inside?
 - ✅ Tiny and lightweight models (perfect for fun or prototyping)
 - ✅ Minimal test code on [<a href="https://colab.research.google.com/drive/1m4RIk2t7L889GH6RqNYzxJadxvcozFZR?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" width="130" alt="google colab logo"></a>](https://colab.research.google.com/drive/1m4RIk2t7L889GH6RqNYzxJadxvcozFZR?usp=sharing) 
-- ✅ Export ONNX model for Mobile and Web [<a href="https://colab.research.google.com/drive/1m4RIk2t7L889GH6RqNYzxJadxvcozFZR?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" width="130" alt="google colab logo"></a>](https://drive.google.com/file/d/11zVgEYzbos0ke0egKw3PUynVYi8LZSaj/view?usp=sharing) 
+- ✅ Export ONNX model for Mobile and Web [<a href="https://colab.research.google.com/drive/1m4RIk2t7L889GH6RqNYzxJadxvcozFZR?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" width="130" alt="google colab logo"></a>](https://drive.google.com/file/d/11zVgEYzbos0ke0egKw3PUynVYi8LZSaj/view?usp=sharing) | [<a href="https://drive.google.com/drive/folders/11zlxsY3kbI8BTZe2Urc4_eto-DqKlYPT?usp=drive_link"><img src="https://storage.googleapis.com/gweb-workspace-assets/uploads/7uffzv9dk4sn-3652TCzauH9jaL0QJ8H6FM-bfed64c7e8da9ac20d439f436570f955-Drive_Full_Logo_2x.svg" width="130" alt="google drive logo"></a>](https://drive.google.com/drive/folders/11zlxsY3kbI8BTZe2Urc4_eto-DqKlYPT?usp=drive_link)
 
 - ✅ Synthetic datasets for testing (rainy and dark images)
 - ✅ Testing pipelines with [UV](https://docs.astral.sh/uv/)
 - ☑️ Training pipelines (support [**BasicSR**](https://github.com/XPixelGroup/BasicSR) training framework) [*Help wanted !!*]
-- ☑️ Web frontend tools with "before vs after" [*Help wanted !!* [see example](https://compress.coxomo.com/)]
+- ☑️ Web frontend tools with "before vs after" : Beta(without WebGPU) Live at [Squoosh AI+](https://compress.coxomo.com/) [*Help wanted !!* ]
 
 
 ### Proposed Baseline: cxm-vision-unet v1
