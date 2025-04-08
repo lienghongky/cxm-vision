@@ -47,6 +47,8 @@ This project, **CXM Vision**, focuses on solving challenging computer vision tas
 ### ⚙️ What's inside?
 - ✅ Tiny and lightweight models (perfect for fun or prototyping)
 - ✅ Minimal test code on [<a href="https://colab.research.google.com/drive/1m4RIk2t7L889GH6RqNYzxJadxvcozFZR?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" width="130" alt="google colab logo"></a>](https://colab.research.google.com/drive/1m4RIk2t7L889GH6RqNYzxJadxvcozFZR?usp=sharing) 
+- ✅ Export ONNX model for Mobile and Web [<a href="https://colab.research.google.com/drive/1m4RIk2t7L889GH6RqNYzxJadxvcozFZR?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" width="130" alt="google colab logo"></a>](https://drive.google.com/file/d/11zVgEYzbos0ke0egKw3PUynVYi8LZSaj/view?usp=sharing) 
+
 - ✅ Synthetic datasets for testing (rainy and dark images)
 - ✅ Testing pipelines with [UV](https://docs.astral.sh/uv/)
 - ☑️ Training pipelines (support [**BasicSR**](https://github.com/XPixelGroup/BasicSR) training framework) [*Help wanted !!*]
@@ -64,6 +66,8 @@ This project, **CXM Vision**, focuses on solving challenging computer vision tas
 | Task                  | Dataset       | PSNR (dB) | SSIM  |  #Parameters (M) | Inference Time (s)   |
 |-----------------------|---------------|-----------|-------|------------------|----------------------|
 | Raindrop Removal(SOTA)| UAV-Rain1k    | 25.258    | 0.9086| 14.9 M           | 0.42   (1500x1000)   |
+| Rain streak Removal.  | Rain100L      | 35.203    | 0.9656| 14.9 M           | 0.05   (480x320)     |
+| Rain streak Removal.  | Rain100H      | 30.084    | 0.8839| 14.9 M           | 0.05   (480x320)     |
 | Low-Light Enhancement | LOLv1         | 22.655    | 0.8363| 14.9 M           | 0.08   (600x400)     |
 | Low-Light Enhancement | LOLv2         | 23.580    | 0.9279| 14.9 M           | 0.05   (284x284)     |
 | Low-Light Enhancement | LOLv2_real    |     -     |   -   | 14.9 M           | -      (600x400)     |
@@ -81,12 +85,14 @@ This project, **CXM Vision**, focuses on solving challenging computer vision tas
 ## Dataset Sample
 
 
-| Task                  | Input Image                                      | Ground Truth (GT) Image                              | Predicted Output                                   |
-|-----------------------|--------------------------------------------------|-----------------------------------------------------|--------------------------------------------------|
-| Raindrop Removal      | ![Rainy Image](datasets/UAV-Rain1k/input/0.png) | ![Clean Image](datasets/UAV-Rain1k/gt/0.png) | ![Output Image](results/UAV-Rain1k/0.png) |
-|  Low-Light Enhancement LOLv2    | ![Low-Light Image](datasets/LOLv2/input/0.png) | ![Clean Image](datasets/LOLv2/gt/0.png) | ![Output Image](results/LOLv2/0.png) |
-| Low-Light Enhancement LOLv1| ![Low-Light Image](datasets/LOLv1/input/0.png) | ![Enhanced GT](datasets/LOLv1/gt/0.png)   | ![Output Image](results/LOLv1/0.png) |
-| Low-Light Enhancement Real| ![Low-Light Image](datasets/LOLv2_real/input/0.png) | ![Enhanced GT](datasets/LOLv2_real/gt/0.png)   | ![Output Image](results/LOLv2_real/0.png) |
+| Task(Datasets)    | Input Image                                      | Ground Truth (GT) Image                             | Predicted Output                                   |
+|-------------------|--------------------------------------------------|-----------------------------------------------------|--------------------------------------------------|
+| UAV-Rain1k        | ![Rainy Image](datasets/UAV-Rain1k/input/0.png)  | ![Clean Image](datasets/UAV-Rain1k/gt/0.png)        | ![Output Image](results/UAV-Rain1k/0.png) |
+| Rain100L          | ![Rainy Image](datasets/Rain100L/input/0.png)  | ![Clean Image](datasets/Rain100L/gt/0.png)        | ![Output Image](results/Rain100L/0.png) |
+| Rain100H          | ![Rainy Image](datasets/Rain100H/input/0.png)  | ![Clean Image](datasets/Rain100H/gt/0.png)        | ![Output Image](results/Rain100H/0.png) |
+| LOLv2             | ![Low-Light Image](datasets/LOLv2/input/0.png)   | ![Clean Image](datasets/LOLv2/gt/0.png)             | ![Output Image](results/LOLv2/0.png) |
+| LOLv1             | ![Low-Light Image](datasets/LOLv1/input/0.png)   | ![Enhanced GT](datasets/LOLv1/gt/0.png)   | ![Output Image](results/LOLv1/0.png) |
+| LOL_Real          | ![Low-Light Image](datasets/LOLv2_real/input/0.png) | ![Enhanced GT](datasets/LOLv2_real/gt/0.png)   | ![Output Image](results/LOLv2_real/0.png) |
 
 
 ## Instruction 

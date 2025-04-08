@@ -62,8 +62,8 @@ def main():
             utils.save_img(output_dir, img_as_ubyte(restored))
             print(f"Output image saved at {output_dir}")
     else:
-        # datasets = ['UAV-Rain1k','LOLv1','LOLv2','LOLv2_real']
-        datasets = ['LOLv2_real']
+        # datasets = ['UAV-Rain1k','Rain100L','Rain100H,'LOLv1','LOLv2','LOLv2_real']
+        datasets = ['Rain100L']
         results = {}
 
         def print_results(results):
