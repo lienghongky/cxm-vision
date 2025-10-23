@@ -52,7 +52,7 @@ This project, **CXM Vision**, focuses on solving challenging computer vision tas
 - ✅ Synthetic datasets for testing (rainy and dark images)
 - ✅ Testing pipelines with [UV](https://docs.astral.sh/uv/)
 - ☑️ Training pipelines (support [**BasicSR**](https://github.com/XPixelGroup/BasicSR) training framework) [*Help wanted !!*]
-- ☑️ Web frontend tools with "before vs after" : Beta(without WebGPU) Live at [Squoosh AI+](https://compress.coxomo.com/) [*Help wanted !!* ]
+- ☑️ Web frontend tools with "before vs after" : Beta(without WebGPU) Live at [Squoosh AI+](https://cmx-compress.vercel.app/) [*Help wanted !!* ]
 
 
 ### Proposed Baseline: cxm-vision-unet v1
